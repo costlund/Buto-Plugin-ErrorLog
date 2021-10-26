@@ -1,0 +1,60 @@
+insert:
+  sql: |
+    insert into errorlog_log(
+      id,
+      error_message,
+      error_file,
+      error_line,
+      error_type,
+      HTTP_HOST,
+      HTTP_USER_AGENT,
+      HTTP_REFERER,
+      SERVER_NAME,
+      SERVER_ADDR,
+      DOCUMENT_ROOT,
+      REDIRECT_QUERY_STRING,
+      REDIRECT_URL,
+      REQUEST_METHOD,
+      QUERY_STRING,
+      REQUEST_URI,
+      session_id,
+      session
+    )values(
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?
+    );
+  params:
+    - {type: s, value: get:id}
+    - {type: s, value: get:error_message}
+    - {type: s, value: get:error_file}
+    - {type: s, value: get:error_line}
+    - {type: s, value: get:error_type}
+    - {type: s, value: get:HTTP_HOST}
+    - {type: s, value: get:HTTP_USER_AGENT}
+    - {type: s, value: get:HTTP_REFERER}
+    - {type: s, value: get:SERVER_NAME}
+    - {type: s, value: get:SERVER_ADDR}
+    - {type: s, value: get:DOCUMENT_ROOT}
+    - {type: s, value: get:REDIRECT_QUERY_STRING}
+    - {type: s, value: get:REDIRECT_URL}
+    - {type: s, value: get:REQUEST_METHOD}
+    - {type: s, value: get:QUERY_STRING}
+    - {type: s, value: get:REQUEST_URI}
+    - {type: s, value: get:session_id}
+    - {type: s, value: get:session}      
