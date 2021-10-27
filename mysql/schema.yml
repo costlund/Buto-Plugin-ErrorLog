@@ -40,6 +40,8 @@ tables:
         type: varchar(255)
       session:
         type: text
+      phpversion:
+        type: varchar(255)
 extra:
   _description: 'Extra field to add to each table if not exist in schema.'
   field:

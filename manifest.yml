@@ -1,5 +1,9 @@
-version: 1.0.0
+version: 1.1.0
 history:
+  1.1.0:
+    date: '2021-10-27'
+    title: 'PHP version'
+    description: 'Add field phpversion to manifest and sql.'
   1.0.0:
     date: '2021-10-15'
     title: 'First version'

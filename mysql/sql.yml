@@ -18,8 +18,10 @@ insert:
       QUERY_STRING,
       REQUEST_URI,
       session_id,
-      session
+      session,
+      phpversion
     )values(
+      ?,
       ?,
       ?,
       ?,
@@ -57,4 +59,5 @@ insert:
     - {type: s, value: get:QUERY_STRING}
     - {type: s, value: get:REQUEST_URI}
     - {type: s, value: get:session_id}
-    - {type: s, value: get:session}      
+    - {type: s, value: get:session}
+    - {type: s, value: get:phpversion}
